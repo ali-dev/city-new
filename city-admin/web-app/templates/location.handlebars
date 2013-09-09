@@ -1,0 +1,13 @@
+<div class="form-inline location" id="location_{{counter}}">
+    <h6 class="simple-header">Location</h6>
+    <select class="select2" placeholder="Choose a city" name="newLocation.{{counter}}.city">
+    	<option value=""></option>
+    	<option value="Jerusalem">Jerusalem</option>
+    	<option value="Ramallah">Ramallah</option>
+    	<option value="Bethlehem">Bethlehem</option>
+    	<option value="Khan Younis">Khan Younis</option>
+    </select>
+    <input type="text" placeholder="Address" name="newLocation.{{counter}}.address"/>
+   	<a class="btn btn-yellow btn-mini js-delete-location fontello-icon-cancel-circle" data-counter="{{counter}}" href="#">Delete</a>
+</div>
+

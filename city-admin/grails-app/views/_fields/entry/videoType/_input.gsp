@@ -1,0 +1,1 @@
+<g:select name="${property}" from="['Youtube', 'Vimeo']" id="js-videoType" class="select2"/>

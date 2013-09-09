@@ -1,0 +1,11 @@
+<div class="form-inline contact" id="contact_{{ obj.counter }}">
+    <h6 class="simple-header">Contact</h6>
+    <select class="select2" placeholder="Contact Type" name="newContacts.{{counter}}.type">
+        <option value=""></option>
+        <option value="Email">Email</option>
+        <option value="Phone Number">Phone Number</option>
+    </select>
+
+    <input type="text" placeholder="Add Details" name="newContacts.{{counter}}.det"/>
+    <a class="btn btn-yellow btn-mini js-delete-contact fontello-icon-cancel-circle" data-counter="{{ counter }}" href="#">Delete</a>
+</div>

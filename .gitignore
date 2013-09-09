@@ -21,6 +21,7 @@
 *Db.script
 
 # logs
+*.log
 /stacktrace.log
 /test/reports
 /logs
