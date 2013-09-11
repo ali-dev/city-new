@@ -97,7 +97,6 @@ class UserController {
         }
 
         if (request.method == 'POST') {
-            def file = request.getFile('photo')
 
             userInstance = cmd.updateUser(userInstance)
 
@@ -140,6 +139,8 @@ class UserController {
                 render(view: "edit", model: [userInstance: userInstance, tagType: tagType])
                 return
             }
+            def file = request.getFile('logo')
+
             if (!file.empty) {
                 page.save(flush: true)
                 imageUploadService.save(page)

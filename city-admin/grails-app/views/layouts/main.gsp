@@ -71,7 +71,16 @@
                     <div class="container-fluid">
                         <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                         <a class="brand" href="javascript:void(0);"><!--<img src="<?php echo $this->baseUrl()?>/admin-assets/img/demo/logo-brand.png"> --></a>
-
+                        <div class="nav-collapse collapse">
+                            <ul class="nav">
+                            <sec:ifNotLoggedIn>
+                                <li ><g:link  controller='login' action='auth'><span class="fontello-icon-login">Login</span></g:link></li>
+                            </sec:ifNotLoggedIn>
+                            <sec:ifLoggedIn>
+                                <li ><g:link  controller='logout' action='index'><span class="fontello-icon-logout">Logout</span></g:link></li>
+                            </sec:ifLoggedIn>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -104,13 +113,17 @@
     <div id="main-container">
         <div id="main-sidebar" class="sidebar sidebar-inverse">
             <div class="sidebar-item">
-                <div class="media profile">
-                    <div class="media-thumb media-left thumb-bordereb"> <a class="img-shadow" href="javascript:void(0);"><img class="thumb"></a> </div>
-                    <div class="media-body">
-                        <h5 class="media-heading">Ali Abu El Haj <small>as Administrator</small></h5>
-                        <p class="data">Last Access: 16 May 15:30</p>
+
+                <sec:ifLoggedIn>
+                    <div class="media profile">
+                         <div class="media-thumb media-left thumb-bordereb"> <a class="img-shadow" href="javascript:void(0);"><img class="thumb" src="/city-admin/uploads/pageImage-<sec:loggedInUserInfo field="pageId" />-small.jpg"></a> </div>
+                        <div class="media-body">
+                            <h5 class="media-heading"><sec:loggedInUserInfo field="fullName" /><small>as Administrator</small></h5>
+                            <p class="data">Last Access: 16 May 15:30</p>
+                        </div>
                     </div>
-                </div>
+                </sec:ifLoggedIn>
+
             </div>
             <!-- // sidebar item - profile -->
 
