@@ -144,13 +144,13 @@
 
                                         <td>
                                             <div class="quick-menu pull-right">
-                                                <div class="btn-group js-actions-container">
+                                                <div class="btn-group js-actions-container" data-post-id="${entry.id}">
 
                                                     <g:render template="/_common/postStatusDisplay" model="[status: entry.status.value]"/>
                                                     <button data-toggle="dropdown" class="btn btn-mini dropdown-toggle">Actions &nbsp;
                                                         <span class="caret"></span>
                                                     </button>
-                                                    <ul class="dropdown-menu pull-right">
+                                                    <ul class="dropdown-menu pull-right" >
                                                         <g:render template="/post/postActions" model="[post: entry]"/>
                                                     </ul>
                                                 </div>

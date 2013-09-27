@@ -50,11 +50,11 @@ def businesses = User.findAllByAccountType('business')
 def artists = User.findAllByAccountType('artist')
 
 businesses.each(){
-    EventEntry.build(page : it.getPage(), title: 'event'+it.id, status: 'APPROVED')
-    JobEntry.build(page : it.getPage(), title: 'job'+it.id, status: 'APPROVED')
+    //EventEntry.build(page : it.getPage(), title: 'event'+it.id, status: 'APPROVED', details: getDetails())
+    JobEntry.build(page : it.getPage(), title: 'job'+it.id, status: 'APPROVED', details: getDetails())
 }
 artists.each(){
-    VideoEntry.build(page : it.getPage(), title: 'video'+it.id, status: 'APPROVED')
+    VideoEntry.build(page : it.getPage(), title: 'video'+it.id, status: 'APPROVED', details: getDetails())
 //    PhotoEntry.build(page : it.getPage(), title: 'photo'+it.id, status: 'APPROVED')
 
 }
@@ -171,6 +171,9 @@ def getTags() {
             "Bank/Financial Institution"
     ]
 }
-//}
 
+def getDetails() {
+     return "According to the report, industry growth for 2013 is so far slightly slower than the previous year: 1.7 percent growth for the first half of the year, as opposed to 1.8 percent for the previous year. But the labor market has on the whole been steadily adding tech jobs, year over year, since 2011.\n";
+
+}
 //setDefaultTarget(main)

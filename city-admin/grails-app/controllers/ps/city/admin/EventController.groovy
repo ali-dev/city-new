@@ -45,12 +45,18 @@ class EventController {
         if (request.method == 'POST') {
             event.properties = params;
             event.page = page;
+            event.eventPhoto = params.eventPhoto
 
             event.addTags(params.tags)
             if (!event.save(flush: true)) {
                 render(view: "createEvent", model: [event: event, page: page])
                 return
             }
+            def file = request.getFile('photo')
+            if(!file.empty) {
+                imageUploadService.save(event)
+            }
+
             flash.message = message(code: 'default.created.message', args: [message(code: 'event.label', default: 'Event'), event.title])
 
             redirect url: createLink(mapping: 'editEvent', params: [eventId: event.id], absolute: true)

@@ -25,7 +25,9 @@
                         <div class="widget-body">
                             <g:form  action="createEvent" params="[pageId : page.id]" class="form-horizontal" method="POST">
                                 <g:render template="eventForm"/>
-                                <g:select name="tags" from="${tagType.tags.toList().name}"  keys="${tagType.tags.toList().id}"/>
+                                <f:field property="eventPhoto" bean="event" value="${event?.eventPhoto}">
+                                    <input type="file" name="photo">
+                                </f:field>
                             </g:form>
                         </div>
                     </div>

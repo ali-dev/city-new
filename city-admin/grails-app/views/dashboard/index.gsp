@@ -32,13 +32,13 @@
                     <li class="media media-overflow">
                         <div class="media-right">
                             <div class="quick-menu">
-                                <div class="btn-group js-actions-container">
+                                <div class="btn-group js-actions-container" data-post-id="${post.id}">
 
                                     <g:render template="/_common/postStatusDisplay" model="[status: post.status.value]"/>
                                     <button data-toggle="dropdown" class="btn btn-mini dropdown-toggle">Actions &nbsp;
                                         <span class="caret"></span>
                                     </button>
-                                    <ul class="dropdown-menu pull-right">
+                                    <ul class="dropdown-menu pull-right" >
                                         <g:render template="/post/postActions" model="[post: post]"/>
                                     </ul>
                                 </div>

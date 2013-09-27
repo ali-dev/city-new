@@ -61,4 +61,11 @@ class PostController {
         [post: post]
     }
 
+    /**
+     * Rejection reason action
+     */
+    def rejectionReason() {
+
+    }
+
 }

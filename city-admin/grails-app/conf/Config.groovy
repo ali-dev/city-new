@@ -14,7 +14,7 @@
 grails.project.groupId = appName // change this to alter the default package name and Maven publishing destination
 grails.mime.file.extensions = true // enables the parsing of file extensions from URLs into the request format
 grails.mime.use.accept.header = false
-//grails.resources.debug = true
+grails.resources.debug = true
 grails.mime.types = [
     all:           '*/*',
     atom:          'application/atom+xml',
@@ -142,6 +142,19 @@ bi.Page = [
         ]
 ]
 
+bi.EventEntry = [
+        outputDir: '/uploads',
+        prefix: 'eventImage',
+        images: [
+                'large':[scale:[width:800, height:600, type:ScaleType.APPROXIMATE]],
+                'small':[scale:[width:100, height:100, type:ScaleType.ACCURATE]],
+        ],
+        constraints:[
+                nullable:true,
+//                maxSize:5000,
+                contentType:['image/gif', 'image/png', 'image/jpeg']
+        ]
+]
 //////////////// JS RESOURCES /////////////
 grails.resources.modules = {
     //        core {

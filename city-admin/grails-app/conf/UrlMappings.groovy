@@ -73,6 +73,12 @@ class UrlMappings {
             controller = 'post'
             action = 'view'
         }
+
+        name postRejectionReason: "/post/$id/rejection-reason" {
+            controller = 'post'
+            action = 'rejectionReason'
+        }
+
         name listPosts: "/posts/list" {
             controller = 'post'
             action = 'index'
