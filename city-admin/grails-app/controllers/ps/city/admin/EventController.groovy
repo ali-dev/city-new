@@ -20,7 +20,7 @@ class EventController {
         def event = EventEntry.get(eventId);
         if (request.method == 'POST') {
             event.properties = params;
-            event.addTags((List)params.tags)
+            event.addTags(params.tags)
             if (event.save(flush: true)) {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'event.label', default: 'Event'), event.title])
                 redirect url: createLink(mapping: 'editEvent', params: [eventId: event.id], absolute: true)
@@ -46,7 +46,7 @@ class EventController {
             event.properties = params;
             event.page = page;
 
-            event.addTags((List)params.tags)
+            event.addTags(params.tags)
             if (!event.save(flush: true)) {
                 render(view: "createEvent", model: [event: event, page: page])
                 return

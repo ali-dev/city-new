@@ -24,7 +24,7 @@ class PhotoController {
         if (request.method == 'POST') {
             photo.properties = params;
             photo.page = page;
-            photo.addTags((List)params.tags)
+            photo.addTags(params.tags)
 
 
             def file = request.getFile('photo')
@@ -59,7 +59,7 @@ class PhotoController {
         def post = PhotoEntry.get(photoId);
         if (request.method == 'POST') {
             post.properties = params
-            post.addTags((List)params.tags)
+            post.addTags(params.tags)
 
             if (post.save(flush: true)) {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'photo.label', default: 'Photo'), post.title])

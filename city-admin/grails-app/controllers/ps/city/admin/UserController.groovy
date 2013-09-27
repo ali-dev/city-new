@@ -35,7 +35,7 @@ class UserController {
         user.accountType =type
         def tags = TagType.findByName(type)
         if (request.method == 'POST') {
-            page.addTags((List)params.tags)
+            page.addTags(params.tags)
             page.details = params.details
             page.logo = params.logo
             user.page = page

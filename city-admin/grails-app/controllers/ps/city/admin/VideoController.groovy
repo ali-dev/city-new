@@ -20,7 +20,7 @@ class VideoController {
         def post = VideoEntry.get(videoId);
         if (request.method == 'POST') {
             post.properties = params;
-            post.addTags((List)params.tags)
+            post.addTags(params.tags)
 
             if (post.save(flush: true)) {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'video.label', default: 'Video'), post.title])
@@ -45,7 +45,7 @@ class VideoController {
         if (request.method == 'POST') {
             post.properties = params;
             post.page = page;
-            post.addTags((List)params.tags)
+            post.addTags(params.tags)
 
             if (post.save(flush: true)) {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'video.label', default: 'Video'), post.title])

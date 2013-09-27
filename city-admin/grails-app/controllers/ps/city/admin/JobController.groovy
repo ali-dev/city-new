@@ -17,7 +17,7 @@ class JobController {
         def post = JobEntry.get(jobId);
         if (request.method == 'POST') {
             post.properties = params;
-            post.addTags((List)params.tags)
+            post.addTags(params.tags)
             if (post.save(flush: true)) {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'job.label', default: 'Job'), post.title])
                 redirect url: createLink(mapping: 'editJob', params: [jobId: post.id], absolute: true)
@@ -34,7 +34,7 @@ class JobController {
         if (request.method == 'POST') {
             post.properties = params;
             post.page = page
-            post.addTags((List)params.tags)
+            post.addTags(params.tags)
             if (post.save(flush: true)) {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'job.label', default: 'Job'), post.title])
                 redirect url: createLink(mapping: 'editJob', params: [jobId: post.id], absolute: true)
