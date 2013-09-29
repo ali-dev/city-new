@@ -8,6 +8,10 @@ class EventEntry extends Entry{
     String location
 
     static constraints = {
+        details blank: false, nullable: false
+        location()
+        startTime()
+        endTime()
     }
 
     /**

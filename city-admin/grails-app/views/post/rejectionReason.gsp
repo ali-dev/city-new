@@ -31,10 +31,10 @@
 
                                         <li><a class="js-template" href="#" data-content="This data is inappropriate"><i class="icon-remove"></i><span class="divider-text"></span>Inappropriate Content</a></li>
                                         <li class="divider"></li>
-                                        <li><a class="js-template" href="#" data-content="This is not a job... I am suspending you forever"><i class="icon-remove"></i><span class="divider-text"></span>Irrelevant content - Not a job</a></li>
-                                        <li><a class="js-template" href="#" data-content="You can use http://www.facebook.com to post a birthday event and invite all your lame friends"><i class="icon-remove"></i><span class="divider-text"></span>Irrelevant content - Not an Event</a></li>
-                                        <li><a class="js-template" href="#" data-content="If you post another cute kittens video I will murder your family"><i class="icon-remove"></i><span class="divider-text"></span>Irrelevant content - Video</a></li>
-                                        <li><a class="js-template" href="#" data-content="Please don't post photos of yourself.. Your face reminds me of Diarrhea"><i class="icon-remove"></i><span class="divider-text"></span>Irrelevant content - Photo</a></li>
+                                        <li><a class="js-template" href="#" data-content="This is not a job... "><i class="icon-remove"></i><span class="divider-text"></span>Irrelevant content - Not a job</a></li>
+                                        <li><a class="js-template" href="#" data-content="You can use http://www.facebook.com to post a personal event"><i class="icon-remove"></i><span class="divider-text"></span>Irrelevant content - Not an Event</a></li>
+                                        <li><a class="js-template" href="#" data-content="No videos of cute kittens "><i class="icon-remove"></i><span class="divider-text"></span>Irrelevant content - Video</a></li>
+                                        <li><a class="js-template" href="#" data-content="Please don't post photos of yourself.."><i class="icon-remove"></i><span class="divider-text"></span>Irrelevant content - Photo</a></li>
 
                                     </ul>
                                 </div>

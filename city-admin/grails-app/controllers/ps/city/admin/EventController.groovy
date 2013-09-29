@@ -7,6 +7,8 @@ import ps.city.core.TagType
 
 class EventController {
 
+    def imageUploadService
+
     def index() {}
 
     /**
@@ -21,6 +23,12 @@ class EventController {
         if (request.method == 'POST') {
             event.properties = params;
             event.addTags(params.tags)
+            def file = request.getFile('eventPhoto')
+            if(!file.empty) {
+                event.eventPhoto = params.eventPhoto
+                imageUploadService.save(event)
+            }
+
             if (event.save(flush: true)) {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'event.label', default: 'Event'), event.title])
                 redirect url: createLink(mapping: 'editEvent', params: [eventId: event.id], absolute: true)
@@ -52,7 +60,7 @@ class EventController {
                 render(view: "createEvent", model: [event: event, page: page])
                 return
             }
-            def file = request.getFile('photo')
+            def file = request.getFile('eventPhoto')
             if(!file.empty) {
                 imageUploadService.save(event)
             }

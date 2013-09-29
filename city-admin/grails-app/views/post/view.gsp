@@ -39,11 +39,11 @@
                         <p><strong>Created: </strong><g:formatDate format="dd MMM, yyyy @ h:m a" date="${post.dateCreated}"/></p>
                         <p><strong>Updated: </strong><g:formatDate format="dd MMM, yyyy @ h:m a" date="${post.lastUpdated}"/></p>
                         <p>${post.details}</p>
-                        %{--<p>--}%
-                            %{--<bi:hasImage bean="${post}">--}%
-                                %{--<bi:img bean="${post}" size="large" />--}%
-                            %{--</bi:hasImage>--}%
-                        %{--</p>--}%
+                        <p>
+                            <bi:hasImage bean="${post}">
+                                <bi:img bean="${post}" size="large" />
+                            </bi:hasImage>
+                        </p>
                     </div>
                 </g:elseif>
 

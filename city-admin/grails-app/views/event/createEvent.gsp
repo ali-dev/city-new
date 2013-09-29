@@ -23,12 +23,10 @@
                     </div>
                     <div class="widget-content">
                         <div class="widget-body">
-                            <g:form  action="createEvent" params="[pageId : page.id]" class="form-horizontal" method="POST">
+                            <g:uploadForm  action="createEvent" params="[pageId : page.id]" class="form-horizontal" method="POST">
                                 <g:render template="eventForm"/>
-                                <f:field property="eventPhoto" bean="event" value="${event?.eventPhoto}">
-                                    <input type="file" name="photo">
-                                </f:field>
-                            </g:form>
+
+                            </g:uploadForm>
                         </div>
                     </div>
                 </div>

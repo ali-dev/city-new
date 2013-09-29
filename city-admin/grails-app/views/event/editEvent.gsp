@@ -23,9 +23,9 @@
                     </div>
                     <div class="widget-content">
                         <div class="widget-body">
-                            <g:form  action="editEvent" params="[eventId : event.id]" class="form-horizontal" method="POST">
+                            <g:uploadForm  action="editEvent" params="[eventId : event.id]" class="form-horizontal" method="POST">
                             <g:render template="eventForm"/>
-                            </g:form>
+                            </g:uploadForm>
                         </div>
                     </div>
                 </div>

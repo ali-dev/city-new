@@ -11,7 +11,7 @@ var AddEventController = {
      */
     init: function() {
         this.$select2El = $('.select2');
-
+        this.datePickerContainer = $('.js-datePicker');
         $('textarea.auto').elastic();
 
         this.bindEvents();
@@ -29,6 +29,10 @@ var AddEventController = {
      *
      */
     initializeSelect2: function() {
+        var $datePickerSelectBoxes = this.datePickerContainer.find('select');
+//        $datePickerSelectBoxes.select2({
+//            minimumResultsForSearch: 100
+//        });
         this.$select2El.select2({
             minimumResultsForSearch: 10
         });
