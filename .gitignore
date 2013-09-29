@@ -42,6 +42,6 @@
 
 # other
 *.iws
-
+/city-admin/web-app/uploads/
 /.idea
 /.DS_Store
