@@ -194,231 +194,50 @@
 <div class="span4 grider">
     <div class="statistic-box ">
     <div id="userLastLogged" class="widget widget-simple widget-user">
-    <div class="widget-header no-border">
-        <h4><i class="fontello-icon-user-pair"></i> Last logged users</h4>
+    <div class="widget-header">
+        <h4><i class="fontello-icon-user-pair"></i> Logged users</h4>
+        <a id="refreshList" class="btn btn-small btn-boo pull-right" href="javascript:void(0);">Refresh <i class="fontello-icon-cw-1"></i></a>
     </div>
-    <div class="widget-bar form-dark">
-        <input id="userLastLoggedSearch" type="text" placeholder="Search user" class="input-block-level margin-05 search">
-        <ul class="nav nav-pills pull-left">
-            <li class="dropdown"> <a href="#" data-toggle="dropdown" class="dropdown-toggle">Sort by <b class="caret"></b></a>
-                <ul class="dropdown-menu sort-by">
-                    <li><a class="sort" data-sort="f_name" href="javascript:void(0)">by name</a></li>
-                    <li><a class="sort" data-sort="f_status" href="javascript:void(0)">by status</a></li>
-                    <li><a class="sort" data-sort="f_email" href="javascript:void(0)">by email</a></li>
-                    <li><a class="sort" data-sort="f_access" href="javascript:void(0)">by access</a></li>
-                </ul>
-            </li>
-            <li class="dropdown"> <a href="#" data-toggle="dropdown" class="dropdown-toggle">Show <b class="caret"></b></a>
-                <ul class="dropdown-menu filter">
-                    <li><a id="filter-online" href="javascript:void(0)">Online</a></li>
-                    <li><a id="filter-offline" href="javascript:void(0)">Offline</a></li>
-                    <li class="divider"></li>
-                    <li><a id="filter-all" href="javascript:void(0)">All</a></li>
-                </ul>
-            </li>
-        </ul>
-        <a id="refreshList" class="btn btn-small btn-boo pull-right" href="javascript:void(0);">Reset <i class="fontello-icon-cw-1"></i></a> </div>
+    %{--<div class="widget-bar form-dark">--}%
+        %{--<input id="userLastLoggedSearch" type="text" placeholder="Search user" class="input-block-level margin-05 search">--}%
+        %{--<ul class="nav nav-pills pull-left">--}%
+            %{--<li class="dropdown"> <a href="#" data-toggle="dropdown" class="dropdown-toggle">Sort by <b class="caret"></b></a>--}%
+                %{--<ul class="dropdown-menu sort-by">--}%
+                    %{--<li><a class="sort" data-sort="f_name" href="javascript:void(0)">by name</a></li>--}%
+                    %{--<li><a class="sort" data-sort="f_status" href="javascript:void(0)">by status</a></li>--}%
+                    %{--<li><a class="sort" data-sort="f_email" href="javascript:void(0)">by email</a></li>--}%
+                    %{--<li><a class="sort" data-sort="f_access" href="javascript:void(0)">by access</a></li>--}%
+                %{--</ul>--}%
+            %{--</li>--}%
+            %{--<li class="dropdown"> <a href="#" data-toggle="dropdown" class="dropdown-toggle">Show <b class="caret"></b></a>--}%
+                %{--<ul class="dropdown-menu filter">--}%
+                    %{--<li><a id="filter-online" href="javascript:void(0)">Online</a></li>--}%
+                    %{--<li><a id="filter-offline" href="javascript:void(0)">Offline</a></li>--}%
+                    %{--<li class="divider"></li>--}%
+                    %{--<li><a id="filter-all" href="javascript:void(0)">All</a></li>--}%
+                %{--</ul>--}%
+            %{--</li>--}%
+        %{--</ul>--}%
+        %{--<a id="refreshList" class="btn btn-small btn-boo pull-right" href="javascript:void(0);">Refresh <i class="fontello-icon-cw-1"></i></a> </div>--}%
     <!-- // widget bar -->
 
     <div class="widget-content">
     <div class="widget-body">
         <ul id="userLastLoggedList" class="widget-list list-bordered thumb-large list">
-            <li class="media">
-                <div class="media-thumb media-right">
-                    <div class="f_status label label-important">offline</div>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Paula Gates</a> <small><a class="f_email" href="javascript:void(0);">gatesa@example.com </a> </small></h4>
-                    <ul class="meta" >
-                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">08:21</strong></li>
-                        <li>IP address: <strong class="f_ip">158.45.46.27</strong></li>
-                    </ul>
-                </div>
-            </li>
-            <!-- // item -->
-
-            <li class="media">
-                <div class="media-thumb media-right">
-                    <div class="f_status label label-success">online</div>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Joaquin Lippincott</a> <small><a class="f_email" href="">aquin@example.com</a></small></h4>
-                    <ul class="meta" >
-                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">08:45</strong></li>
-                        <li>IP address: <strong class="f_ip">146.145.146.011</strong></li>
-                    </ul>
-                </div>
-            </li>
-            <!-- // item -->
-
-            <li class="media">
-                <div class="media-thumb media-right">
-                    <div class="f_status label label-important">offline</div>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Dylan Tack</a> <small><a class="f_email" href="">d.tack@example.com</a></small></h4>
-                    <ul class="meta" >
-                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">08:52</strong></li>
-                        <li>IP address: <strong class="f_ip">111.105.156.103</strong></li>
-                    </ul>
-                </div>
-            </li>
-            <!-- // item -->
-
-            <li class="media">
-                <div class="media-thumb media-right">
-                    <div class="f_status label label-success">online</div>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Scott Vandenhey</a> <small><a class="f_email" href="">vandy@example.com</a></small></h4>
-                    <ul class="meta" >
-                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">09:15</strong></li>
-                        <li>IP address: <strong class="f_ip">123.45.78.47</strong></li>
-                    </ul>
-                </div>
-            </li>
-            <!-- // item -->
-
-            <li class="media">
-                <div class="media-thumb media-right">
-                    <div class="f_status label label-important">offline</div>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Barrett Olafson</a> <small><a class="f_email" href="">olagson@example.com</a></small></h4>
-                    <ul class="meta" >
-                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">09:22</strong></li>
-                        <li>IP address: <strong class="f_ip">147.200.69.00</strong></li>
-                    </ul>
-                </div>
-            </li>
-            <!-- // item -->
-
-            <li class="media">
-                <div class="media-thumb media-right">
-                    <div class="f_status label label-important">offline</div>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Chuck Vose</a> <small><a class="f_email" href="">vose@example.com</a></small></h4>
-                    <ul class="meta" >
-                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">09:35</strong></li>
-                        <li>IP address: <strong class="f_ip">154.147.46.78</strong></li>
-                    </ul>
-                </div>
-            </li>
-            <!-- // item -->
-
-            <li class="media">
-                <div class="media-thumb media-right">
-                    <div class="f_status label label-success">online</div>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Mariya Borisova</a> <small><a class="f_email" href="">mbo@example.com</a></small></h4>
-                    <ul class="meta" >
-                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">09:37</strong></li>
-                        <li>IP address: <strong class="f_ip">75.45.45.75</strong></li>
-                    </ul>
-                </div>
-            </li>
-            <!-- // item -->
-
-            <li class="media">
-                <div class="media-thumb media-right">
-                    <div class="f_status label label-important">offline</div>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Gizzelle Williams</a> <small><a class="f_email" href="">gizzelle@example.com</a></small></h4>
-                    <ul class="meta" >
-                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">10:16</strong></li>
-                        <li>IP address: <strong class="f_ip">146.174.200.124</strong></li>
-                    </ul>
-                </div>
-            </li>
-            <!-- // item -->
-
-            <li class="media">
-                <div class="media-thumb media-right">
-                    <div class="f_status label label-success">online</div>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Julie Baumler</a> <small><a class="f_email" href="">julie.baumler@example.com</a></small></h4>
-                    <ul class="meta" >
-                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">10:22</strong></li>
-                        <li>IP address: <strong class="f_ip">102.105.104.55</strong></li>
-                    </ul>
-                </div>
-            </li>
-            <!-- // item -->
-
-            <li class="media">
-                <div class="media-thumb media-right">
-                    <div class="f_status label label-success">online</div>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Anna Gates</a> <small><a class="f_email" href="">a.gates@example.com</a></small></h4>
-                    <ul class="meta" >
-                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">10:59</strong></li>
-                        <li>IP address: <strong class="f_ip">125.205.204.27</strong></li>
-                    </ul>
-                </div>
-            </li>
-            <!-- // item -->
-
-            <li class="media">
-                <div class="media-thumb media-right">
-                    <div class="f_status label label-important">offline</div>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Brent Dillender</a> <small><a class="f_email" href="">bredi@example.com</a></small></h4>
-                    <ul class="meta" >
-                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">12:45</strong></li>
-                        <li>IP address: <strong class="f_ip">158.126.145.27</strong></li>
-                    </ul>
-                </div>
-            </li>
-            <!-- // item -->
-
-            <li class="media">
-                <div class="media-thumb media-right">
-                    <div class="f_status label label-important">offline</div>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Petr Pederson</a> <small><a class="f_email" href="">pepe@example.com</a></small></h4>
-                    <ul class="meta" >
-                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">12:46</strong></li>
-                        <li>IP address: <strong class="f_ip">111.125.146.27</strong></li>
-                    </ul>
-                </div>
-            </li>
-            <!-- // item -->
-
-            <li class="media">
-                <div class="media-thumb media-right">
-                    <div class="f_status label label-success">online</div>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Nicolas Johanson</a> <small><a class="f_email" href="">nikolas.johanson@example.com</a></small></h4>
-                    <ul class="meta" >
-                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">13:15</strong></li>
-                        <li>IP address: <strong class="f_ip">134.11.22.33</strong></li>
-                    </ul>
-                </div>
-            </li>
-            <!-- // item -->
-
-            <li class="media">
-                <div class="media-thumb media-right">
-                    <div class="f_status label label-important">offline</div>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Katarina Sarmirianos</a> <small><a class="f_email" href="">sarmir@example.com</a></small></h4>
-                    <ul class="meta" >
-                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">14:23</strong></li>
-                        <li>IP address: <strong class="f_ip">158.45.46.27</strong></li>
-                    </ul>
-                </div>
-            </li>
-            <!-- // item -->
-
+            <g:each in="${activeUsers}" var="user">
+                <li class="media">
+                    <div class="media-thumb media-right">
+                        <div class="f_status label label-success">online</div>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">${user.fullName}</a> <small><a class="f_email" href="">${user.email}</a></small></h4>
+                        <ul class="meta" >
+                            <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">TBD</strong></li>
+                            %{--<li>IP address: <strong class="f_ip">146.145.146.011</strong></li>--}%
+                        </ul>
+                    </div>
+                </li>
+            </g:each>
         </ul>
     </div>
     </div>
@@ -435,157 +254,6 @@
     <!-- // Widget -->
     </div>
     <!-- // Statistic Box -->
-
-    <div class="statistic-box well well-black">
-        <div class="section-title">
-            <h6><i class="fontello-icon-back-in-time"></i> Average Orders</h6>
-        </div>
-        <div class="section-content">
-            <h2 class="statistic-values">$2,644.42</h2>
-        </div>
-    </div>
-    <!-- // Statistic Box -->
-
-    <div class="widget widget-simple">
-        <div class="widget-header header-small"> <a class="btn btn-mini btn-success pull-right" href="#">Show All</a>
-            <h6><i class="fontello-icon-back-in-time"></i> Last 5 Orders</h6>
-        </div>
-        <div class="widget-content">
-            <div class="widget-body">
-                <table class="table table-condensed">
-                    <thead>
-                    <tr>
-                        <th scope="col" width="60%"> Customer</th>
-                        <th scope="col">Items</th>
-                        <th scope="col">Grand Total</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>John Doe</td>
-                        <td class="text-right">1</td>
-                        <td class="text-right bold">$118.00</td>
-                    </tr>
-                    <tr>
-                        <td>Paula Gates</td>
-                        <td class="text-right">2</td>
-                        <td class="text-right bold">$1,579.50</td>
-                    </tr>
-                    <tr>
-                        <td>Tony Rogers</td>
-                        <td class="text-right">1</td>
-                        <td class="text-right bold">$26.00</td>
-                    </tr>
-                    <tr>
-                        <td>Leona Nulla</td>
-                        <td class="text-right">1</td>
-                        <td class="text-right bold">$312.13</td>
-                    </tr>
-                    <tr>
-                        <td>Peter Johanson</td>
-                        <td class="text-right">3</td>
-                        <td class="text-right bold">$814.20</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    <!-- // Widget -->
-
-    <div class="widget widget-simple">
-        <div class="widget-header header-small"> <a class="btn btn-mini btn-success pull-right" href="#">Show All</a>
-            <h6><i class="fontello-icon-back-in-time"></i> Last 5 Search Terms</h6>
-        </div>
-        <div class="widget-content">
-            <div class="widget-body">
-                <table class="table table-condensed">
-                    <thead>
-                    <tr>
-                        <th scope="col" width="60%">Search Term</th>
-                        <th scope="col">Results</th>
-                        <th scope="col">Number of Uses</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Boo</td>
-                        <td class="text-right">1</td>
-                        <td class="text-right bold">18</td>
-                    </tr>
-                    <tr>
-                        <td>iphone</td>
-                        <td class="text-right">36</td>
-                        <td class="text-right bold">2458</td>
-                    </tr>
-                    <tr>
-                        <td>Jewellery</td>
-                        <td class="text-right">0</td>
-                        <td class="text-right bold">0</td>
-                    </tr>
-                    <tr>
-                        <td>shoe</td>
-                        <td class="text-right">9</td>
-                        <td class="text-right bold">6</td>
-                    </tr>
-                    <tr>
-                        <td>blablabla</td>
-                        <td class="text-right">0</td>
-                        <td class="text-right bold">0</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    <!-- // Widget -->
-
-    <div class="widget widget-simple">
-        <div class="widget-header header-small"> <a class="btn btn-mini btn-success pull-right" href="#">Show All</a>
-            <h6><i class="fontello-icon-search-2"></i> Top 5 Search Terms</h6>
-        </div>
-        <div class="widget-content">
-            <div class="widget-body">
-                <table class="table table-condensed">
-                    <thead>
-                    <tr>
-                        <th scope="col" width="60%">Search Term</th>
-                        <th scope="col">Results</th>
-                        <th scope="col">Number of Uses</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>iPhone</td>
-                        <td class="text-right">36</td>
-                        <td class="text-right bold">2458</td>
-                    </tr>
-                    <tr>
-                        <td>Apple</td>
-                        <td class="text-right">265</td>
-                        <td class="text-right bold">2165</td>
-                    </tr>
-                    <tr>
-                        <td>Computer</td>
-                        <td class="text-right">184</td>
-                        <td class="text-right bold">1278</td>
-                    </tr>
-                    <tr>
-                        <td>camera</td>
-                        <td class="text-right">19</td>
-                        <td class="text-right bold">1065</td>
-                    </tr>
-                    <tr>
-                        <td>blue</td>
-                        <td class="text-right">27</td>
-                        <td class="text-right bold">865</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    <!-- // Widget -->
 
 </div>
 </div>

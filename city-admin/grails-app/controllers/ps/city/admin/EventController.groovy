@@ -11,6 +11,8 @@ class EventController {
 
     def index() {}
 
+    def springSecurityService
+
     /**
      * edit Event action
      *
@@ -19,6 +21,7 @@ class EventController {
      */
     def editEvent(Long eventId)
     {
+
         def event = EventEntry.get(eventId);
         if (request.method == 'POST') {
             event.properties = params;

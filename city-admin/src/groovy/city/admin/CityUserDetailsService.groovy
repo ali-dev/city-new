@@ -37,7 +37,7 @@ class CityUserDetailsService implements GrailsUserDetailsService {
             return new CityUserDetails(user.username, user.password, user.enabled,
                     !user.accountExpired, !user.passwordExpired,
                     !user.accountLocked, authorities ?: NO_ROLES, user.id,
-                    user.fullName, user.page)
+                    user.fullName, user.page, user.email)
         }
     }
 }

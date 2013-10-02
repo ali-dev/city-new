@@ -110,6 +110,7 @@ grails.plugins.springsecurity.interceptUrlMap = [
 //        '/logout/**':    ['IS_AUTHENTICATED_ANONYMOUSLY']
 ]
 
+providerNames = ['concurrentSessionController', 'daoAuthenticationProvider', 'anonymousAuthenticationProvider', 'rememberMeAuthenticationProvider']
 
 /////////////////// IMAGE UPLOADS /////////////////////
 import pl.burningice.plugins.image.engines.scale.ScaleType
