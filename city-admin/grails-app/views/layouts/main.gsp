@@ -116,7 +116,8 @@
 
                 <sec:ifLoggedIn>
                     <div class="media profile">
-                         <div class="media-thumb media-left thumb-bordereb"> <a class="img-shadow" href="javascript:void(0);"><img class="thumb" src="/city-admin/uploads/pageImage-<sec:loggedInUserInfo field="pageId" />-small.jpg"></a> </div>
+                         <div class="media-thumb media-left thumb-bordereb"> <a class="img-shadow" href="javascript:void(0);">
+                             <img class="thumb" src="/city-admin/uploads/pageImage-<sec:loggedInUserInfo field="pageId" />-small.<sec:loggedInUserInfo field="imageExtension" />"></a> </div>
                         <div class="media-body">
                             <h5 class="media-heading"><sec:loggedInUserInfo field="fullName" /><small>as Administrator</small></h5>
                             <p class="data">Last Access: 16 May 15:30</p>

@@ -10,6 +10,7 @@ class CityUserDetails extends GrailsUser {
 
     final String fullName
     final String pageId
+    final String imageExtension
     final String email
 
     CityUserDetails(String username, String password, boolean enabled,
@@ -23,6 +24,6 @@ class CityUserDetails extends GrailsUser {
         this.fullName = fullName
         this.email = email
         this.pageId = page.id
-
+        this.imageExtension = page.imageExtension
     }
 }
