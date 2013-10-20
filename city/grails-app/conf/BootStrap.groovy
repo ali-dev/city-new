@@ -1,7 +1,6 @@
 import ps.city.core.EventEntry
 import ps.city.core.VideoEntry
-import ps.city.core.AlbumEntry
-import ps.city.core.domain.User
+import ps.city.core.User
 
 
 class BootStrap {

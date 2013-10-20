@@ -5,7 +5,6 @@ grails.project.test.reports.dir = "target/test-reports"
 grails.project.target.level = 1.6
 grails.project.source.level = 1.6
 grails.plugin.location.'city-core' = '../city-core'
-grails.plugin.location.'admin' = '../admin'
 
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
 
@@ -80,6 +79,7 @@ grails.project.dependency.resolution = {
         compile ":slug-generator:0.3.1"
         compile ":underscore:1.4.4"
         runtime ":handlebars-resources:0.3.6"
+        compile ":burning-image:0.5.1"
 //        runtime ":cached-resources:1.1"
 
     }

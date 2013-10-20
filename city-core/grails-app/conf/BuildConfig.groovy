@@ -41,6 +41,8 @@ grails.project.dependency.resolution = {
         compile ":spring-security-core:1.2.7.3"
         compile ":spring-security-acl:1.1.1"
         compile ":spring-security-appinfo:1.0"
+        compile ":burning-image:0.5.1"
+
 
 
     }

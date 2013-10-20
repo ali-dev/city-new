@@ -91,32 +91,13 @@ log4j = {
            'net.sf.ehcache.hibernate'
 }
 
-grails.plugins.springsecurity.password.algorithm='SHA-512'
-
-grails.plugins.springsecurity.userLookup.userDomainClassName = "ps.city.core.User"
-
-grails.plugins.springsecurity.securityConfigType = "InterceptUrlMap"
-
-
-grails.plugins.springsecurity.interceptUrlMap = [
-//        '/secure/**':    ['ROLE_ADMIN'],
-//        '/finance/**':   ['ROLE_FINANCE', 'IS_AUTHENTICATED_FULLY'],
-//        '/user/**': ['ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
-//        '/js/**':        ['IS_AUTHENTICATED_ANONYMOUSLY'],
-//        '/css/**':       ['IS_AUTHENTICATED_ANONYMOUSLY'],
-//        '/images/**':    ['IS_AUTHENTICATED_ANONYMOUSLY'],
-//        '/*':            ['IS_AUTHENTICATED_ANONYMOUSLY'],
-//        '/login/**':     ['IS_AUTHENTICATED_ANONYMOUSLY'],
-//        '/logout/**':    ['IS_AUTHENTICATED_ANONYMOUSLY']
-]
-
-providerNames = ['concurrentSessionController', 'daoAuthenticationProvider', 'anonymousAuthenticationProvider', 'rememberMeAuthenticationProvider']
 
 /////////////////// IMAGE UPLOADS /////////////////////
 import pl.burningice.plugins.image.engines.scale.ScaleType
 
 bi.PhotoEntry = [
         outputDir: '/uploads',
+//        outputDir: ['path':'/Users/ali_abulhaj/grails-projects/city/uploads/', 'alias':'/city-uploads/'],
         prefix: 'mySuperImage',
         images: [
                 'large':[scale:[width:800, height:600, type:ScaleType.APPROXIMATE]],
@@ -156,6 +137,30 @@ bi.EventEntry = [
                 contentType:['image/gif', 'image/png', 'image/jpeg']
         ]
 ]
+
+
+grails.plugins.springsecurity.password.algorithm='SHA-512'
+
+grails.plugins.springsecurity.userLookup.userDomainClassName = "ps.city.core.User"
+
+grails.plugins.springsecurity.securityConfigType = "InterceptUrlMap"
+
+
+grails.plugins.springsecurity.interceptUrlMap = [
+//        '/secure/**':    ['ROLE_ADMIN'],
+//        '/finance/**':   ['ROLE_FINANCE', 'IS_AUTHENTICATED_FULLY'],
+//        '/user/**': ['ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
+//        '/js/**':        ['IS_AUTHENTICATED_ANONYMOUSLY'],
+//        '/css/**':       ['IS_AUTHENTICATED_ANONYMOUSLY'],
+//        '/images/**':    ['IS_AUTHENTICATED_ANONYMOUSLY'],
+//        '/*':            ['IS_AUTHENTICATED_ANONYMOUSLY'],
+//        '/login/**':     ['IS_AUTHENTICATED_ANONYMOUSLY'],
+//        '/logout/**':    ['IS_AUTHENTICATED_ANONYMOUSLY']
+]
+
+providerNames = ['concurrentSessionController', 'daoAuthenticationProvider', 'anonymousAuthenticationProvider', 'rememberMeAuthenticationProvider']
+
+
 //////////////// JS RESOURCES /////////////
 grails.resources.modules = {
     //        core {

@@ -91,6 +91,8 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+/////////////////// IMAGE UPLOADS /////////////////////
+import pl.burningice.plugins.image.engines.scale.ScaleType
 
 grails.resources.modules = {
     //        core {
