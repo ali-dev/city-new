@@ -1,28 +1,160 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"><!--<![endif]-->
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title><g:layoutTitle default="Grails"/></title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
-		<link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
-		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
-		<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
-		<link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
-		<g:layoutHead/>
-		<r:layoutResources />
-	</head>
-	<body>
-		<div id="grailsLogo" role="banner"><a href="http://grails.org"><img src="${resource(dir: 'images', file: 'grails_logo.png')}" alt="Grails"/></a></div>
-		<g:layoutBody/>
-		<div class="footer" role="contentinfo"></div>
-		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
-		<g:javascript library="application"/>
-		<r:layoutResources />
-	</body>
+<html lang="en">
+<head>
+    <!-- META DATA -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--[if IE]><meta http-equiv="cleartype" content="on" /><![endif]-->
+
+    <!-- SEO -->
+    <title><g:layoutTitle default="City.ps"/></title>
+
+    <!-- MODERNIZR -->
+    <!-- <script type="text/javascript" src="assets/scripts/modernizr.js"></script> -->
+
+    <!-- ICONS -->
+    <link rel="shortcut icon"  href="${resource(dir: 'images', file: 'favicon2.ico')}" type="image/x-icon">
+
+    <link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}" />
+    <link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'touch-icon-iphone.png')}" />
+    <link rel="apple-touch-icon" sizes="72x72" href="${resource(dir: 'images', file: 'apple-touch-icon-72x72-precomposed.png')}" />
+    <link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-114x114-precomposed.png')}" />
+    <link rel="apple-touch-icon" sizes="144x144" href="${resource(dir: 'images', file: 'apple-touch-icon-144x144-precomposed.png')}" />
+
+    <!-- STYLESHEETS -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300,500,600,800' rel='stylesheet' type='text/css'>
+    %{--<link rel="stylesheet" media="screen, projection" href="assets/styles/" />--}%
+    <link rel="stylesheet" media="screen, projection" href="${resource(dir: 'styles', file: 'screen.css')}" type="text/css">
+    <!-- <link rel="stylesheet" media="screen and (min-width: 480px)" href="assets/styles/screen_small.css" />
+        <link rel="stylesheet" media="screen and (min-width: 800px)" href="assets/styles/screen_medium.css" />
+        <link rel="stylesheet" media="screen and (min-width: 1024px)" href="assets/styles/screen_large.css" />
+        <link rel="stylesheet" media="screen and (min-width: 1450px)" href="assets/styles/screen_huge.css" /> -->
+    <!--[if lte IE 8]><link rel="stylesheet" type="text/css" media="screen, projection" href="assets/styles/ie8.css" /><![endif]-->
+    <!--[if lte IE 7]><link rel="stylesheet" type="text/css" media="screen, projection" href="assets/styles/ie7.css" /><![endif]-->
+
+    <!-- JQUERY -->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="assets/scripts/jquery.min.js"><\/script>')</script>
+
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="${resource(dir: 'scripts', file: 'global.js')}"></script>
+
+    <!-- 3rd Party JS -->
+    <script type="text/javascript" src="${resource(dir: 'scripts', file: 'respond.min.js')}"></script>
+    <g:layoutHead/>
+    <r:layoutResources />
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+<!-- header -->
+
+<!-- REMOVE FOR PRODUCTION -->
+<div class="breakpointTester">
+</div>
+<!-- REMOVE FOR PRODUCTION -->
+
+<div class="globalHeader">
+
+    <div class="globalHeader-util">
+
+        <h1 class="globalLogo">City.ps</h1>
+
+        <div class="globalUtil">
+            <div class="globalUtil-bd">
+                <a class="btn btn_shadow" href="">Login</a>
+                <a class="btn btn_shadow" href="">Register</a>
+                <div class="btn btn_mobileMenu js-globalNav-toggle">Menu</div>
+            </div>
+            <div class="globalUtil-ft">
+                <a class="link link_cta" href="">Learn more about City.ps</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="globalHeader-nav">
+        <nav class="globalNav">
+            <div class="lTable">
+                <div>
+                    <ul class="globalNav-nav js-globalNav-target">
+                        <li><a href="">All<span class="isHidden_mobile"> Posts</span></a></li>
+                        <li><a href="">Jobs</a></li>
+                        <li><a href="">Events</a></li>
+                        <li><a href="">Arts</a></li>
+                        <li><a href="">Restaurants</a></li>
+                        <li><a href="">Businesses</a></li>
+                        <li><a href="">Organizations</a></li>
+                    </ul>
+                </div>
+                <div class="mix-lTable_isRight">
+                    <div class="globalNav-search">
+                        <form class="globalSearch">
+                            <label class="globalSearch-label">Search</label>
+                            <input class="globalSearch-input" type="search" placeholder="Enter Keywords" />
+                        </form>
+                        <div class="advSearchTrigger js-advSearchToggle">Advanced Search</div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="globalTools lTable">
+            <div class="advSearchBox js-advSearchTarget">
+                <form class="advSearchTarget">
+                    <div class="advSearchTarget-fieldset">
+                        <input class="input" type="input" placeholder="one" />
+                        <input class="input" type="input" placeholder="one" />
+                        <input class="input" type="input" placeholder="one" />
+                        <input class="input" type="input" placeholder="one" />
+                        <input class="btn btn_tight" type="submit" value="Search" />
+                    </div>
+                </form>
+            </div>
+            <div class="sortBox">
+                <div class="sortBox-label isHidden_mobile">Sort By</div>
+                <ul class="sortBox-list">
+                    <li class="isActive"><a href="">Most Recent</a></li>
+                    <li><a href="">Most Liked</a></li>
+                    <li><a href="">Most Favorites</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- end header -->
+
+
+
+
+<g:layoutBody/>
+<r:layoutResources />
+
+
+
+
+
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
