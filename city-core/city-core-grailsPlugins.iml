@@ -74,7 +74,6 @@
     <orderEntry type="module-library" exported="">
       <library name="Grails User Library (city-core-grailsPlugins)">
         <CLASSES>
-          <root url="file://$USER_HOME$/.grails/2.2.2/projects/city-core/plugins/burning-image-0.5.1/lib" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/nekohtml/nekohtml/jars/nekohtml-1.9.6.2.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/nekohtml/xercesMinimal/jars/xercesMinimal-1.9.6.2.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.maven.wagon/wagon-http-shared/jars/wagon-http-shared-1.0-beta-6.jar!/" />
@@ -101,6 +100,7 @@
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.springframework.security/spring-security-acl/jars/spring-security-acl-3.0.7.RELEASE.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.springframework.security/spring-security-web/jars/spring-security-web-3.0.7.RELEASE.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.springframework.security/spring-security-core/jars/spring-security-core-3.0.7.RELEASE.jar!/" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/city-core/plugins/burning-image-0.5.1/lib" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

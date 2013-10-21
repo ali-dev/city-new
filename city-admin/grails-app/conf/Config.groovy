@@ -14,7 +14,7 @@
 grails.project.groupId = appName // change this to alter the default package name and Maven publishing destination
 grails.mime.file.extensions = true // enables the parsing of file extensions from URLs into the request format
 grails.mime.use.accept.header = false
-grails.resources.debug = true
+//grails.resources.debug = true
 grails.mime.types = [
     all:           '*/*',
     atom:          'application/atom+xml',
@@ -96,8 +96,7 @@ log4j = {
 import pl.burningice.plugins.image.engines.scale.ScaleType
 
 bi.PhotoEntry = [
-        outputDir: '/uploads',
-//        outputDir: ['path':'/Users/ali_abulhaj/grails-projects/city/uploads/', 'alias':'/city-uploads/'],
+        outputDir: ['path':'/Users/ali_abulhaj/grails-projects/city/uploads/', 'alias':'/uploads/'],
         prefix: 'mySuperImage',
         images: [
                 'large':[scale:[width:800, height:600, type:ScaleType.APPROXIMATE]],
@@ -111,7 +110,7 @@ bi.PhotoEntry = [
 ]
 
 bi.Page = [
-        outputDir: '/uploads',
+        outputDir: ['path':'/Users/ali_abulhaj/grails-projects/city/uploads/', 'alias':'/uploads/'],
         prefix: 'pageImage',
         images: [
                 'large':[scale:[width:800, height:600, type:ScaleType.APPROXIMATE]],
@@ -125,7 +124,7 @@ bi.Page = [
 ]
 
 bi.EventEntry = [
-        outputDir: '/uploads',
+        outputDir: ['path':'/Users/ali_abulhaj/grails-projects/city/uploads/', 'alias':'/uploads/'],
         prefix: 'eventImage',
         images: [
                 'large':[scale:[width:800, height:600, type:ScaleType.APPROXIMATE]],

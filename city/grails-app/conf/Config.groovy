@@ -92,7 +92,7 @@ log4j = {
            'net.sf.ehcache.hibernate'
 }
 /////////////////// IMAGE UPLOADS /////////////////////
-import pl.burningice.plugins.image.engines.scale.ScaleType
+//import pl.burningice.plugins.image.engines.scale.ScaleType
 
 grails.resources.modules = {
     //        core {
@@ -119,31 +119,5 @@ grails.resources.modules = {
 //            resource url:'/css/forms.css'
 //            resource url:'/js/forms.js'
 //        }
-    dataTables {
-        dependsOn 'jquery'
-        resource url:'/js-core/plugins/pl-table/datatables/media/js/jquery.dataTables.js'
-    }
 
-    dataTablesPlugins {
-        dependsOn 'dataTables'
-        resource url: 'js-core/plugins/pl-table/datatables/plugin/jquery.dataTables.plugins.js'
-    }
-    columnFilter {
-        dependsOn 'dataTables'
-        resource url: 'js-core/plugins/pl-table/datatables/plugin/jquery.dataTables.columnFilter.js'
-    }
-
-    select2 {
-        dependsOn 'jquery'
-        resource url: '/js-core/plugins/pl-form/select2/select2.min.js'
-    }
-
-    elastic {
-        dependsOn 'jquery'
-        resource url: 'js-core/plugins/pl-form/elastic/jquery.elastic.js'
-    }
-    adminAddContact {
-        resource url: 'js-core/lib/views/user/ContactView.js'
-
-    }
 }
