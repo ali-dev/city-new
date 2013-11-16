@@ -14,6 +14,7 @@
 grails.project.groupId = appName // change this to alter the default package name and Maven publishing destination
 grails.mime.file.extensions = true // enables the parsing of file extensions from URLs into the request format
 grails.mime.use.accept.header = false
+//grails.resources.debug = true
 grails.mime.types = [
     all:           '*/*',
     atom:          'application/atom+xml',
@@ -33,7 +34,7 @@ grails.mime.types = [
 //grails.urlmapping.cache.maxsize = 1000
 
 // What URL patterns should be processed by the resources plugin
-grails.resources.adhoc.patterns = ['/images/*', '/css/*', '/js/*', '/plugins/*']
+grails.resources.adhoc.patterns = ['/images/*', '/css/*', '/js/*', '/plugins/*', '/styles/*']
 
 // The default codec used to encode data with ${}
 grails.views.default.codec = "none" // none, html, base64
@@ -92,32 +93,96 @@ log4j = {
            'net.sf.ehcache.hibernate'
 }
 /////////////////// IMAGE UPLOADS /////////////////////
-//import pl.burningice.plugins.image.engines.scale.ScaleType
+import pl.burningice.plugins.image.engines.scale.ScaleType
 
+bi.PhotoEntry = [
+        outputDir: ['path':'/Users/ali_abulhaj/grails-projects/city/uploads/', 'alias':'/uploads/'],
+        prefix: 'mySuperImage',
+        images: [
+                'large':[scale:[width:800, height:600, type:ScaleType.APPROXIMATE]],
+                'small':[scale:[width:100, height:100, type:ScaleType.ACCURATE]],
+        ],
+        constraints:[
+                nullable:true,
+//                maxSize:5000,
+                contentType:['image/gif', 'image/png', 'image/jpeg']
+        ]
+]
+
+bi.Page = [
+        outputDir: ['path':'/Users/ali_abulhaj/grails-projects/city/uploads/', 'alias':'/uploads/'],
+        prefix: 'pageImage',
+        images: [
+                'large':[scale:[width:800, height:600, type:ScaleType.APPROXIMATE]],
+                'small':[scale:[width:100, height:100, type:ScaleType.ACCURATE]],
+        ],
+        constraints:[
+                nullable:true,
+//                maxSize:5000,
+                contentType:['image/gif', 'image/png', 'image/jpeg']
+        ]
+]
+
+bi.EventEntry = [
+        outputDir: ['path':'/Users/ali_abulhaj/grails-projects/city/uploads/', 'alias':'/uploads/'],
+        prefix: 'eventImage',
+        images: [
+                'large':[scale:[width:800, height:600, type:ScaleType.APPROXIMATE]],
+                'small':[scale:[width:100, height:100, type:ScaleType.ACCURATE]],
+        ],
+        constraints:[
+                nullable:true,
+//                maxSize:5000,
+                contentType:['image/gif', 'image/png', 'image/jpeg']
+        ]
+]
 grails.resources.modules = {
-    //        core {
-//            dependsOn 'jquery, utils'
-//            defaultBundle 'ui'
-//            resource url:'/js/core.js', disposition: 'head'
-//            resource url:'/js/ui.js'
-//            resource url:'/css/main.css',
-//                    resource url:'/css/branding.css'
-//            resource url:'/css/print.css', attrs:[media:'print']
-//        }
+    core {
+        dependsOn 'jquery, respond, isotope'
+        resource url:'/scripts/global.js', disposition: 'head'
+//        resource url:'/css/main.css'
+    }
 
-//        utils {
-//            dependsOn 'jquery'
-//
-//            resource url:'/js/utils.js'
-//        }
-//
-//
-//        forms {
-//            dependsOn 'core,utils'
-//            defaultBundle 'ui'
-//
-//            resource url:'/css/forms.css'
-//            resource url:'/js/forms.js'
-//        }
+    respond {
+        dependsOn 'jquery'
+        resource url: '/scripts/respond.min.js', disposition: 'head'
+    }
+
+    isotope {
+        dependsOn 'jquery'
+        resource url: '/scripts/jquery.isotope.min.js'
+        resource url: '/scripts/modules/lib/Isotope.js'
+    }
+
+    select2 {
+        dependsOn 'jquery'
+        resource url: '/scripts/vendor/select2/select2.min.js'
+        resource url: '/scripts/vendor/select2/select2.css'
+    }
+
+    searchPosts {
+        dependsOn 'jquery, isotope'
+        resource url: '/scripts/modules/lib/SearchPosts.js'
+    }
+    colorbox {
+        dependsOn 'jquery'
+        resource url: '/scripts/vendor/colorbox/colorbox.css'
+        resource url: '/scripts/vendor/colorbox/jquery.colorbox-min.js'
+    }
+
+    postsListPages {
+        dependsOn 'select2, isotope, searchPosts, colorbox'
+//        resource url: '/styles/component.css'
+//        resource url: '/scripts/vendor/scroll/css/website.css'
+
+
+//        resource url: '/scripts/vendor/modal/classie.js'
+//        resource url: '/scripts/vendor/modal/modalEffects.js'
+//        resource url: '/scripts/vendor/modal/cssParser.js'
+//        resource url: '/scripts/vendor/scroll/jquery.tinyscrollbar.min.js'
+        resource url: '/scripts/modules/posts/MainLists.js'
+    }
+
+
 
 }

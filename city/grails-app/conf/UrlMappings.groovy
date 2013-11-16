@@ -7,7 +7,18 @@ class UrlMappings {
 			}
 		}
 
-        "/"(view:"/index")
+//        "/"(view:"/index")
+        "/"
+        {
+            controller = "home"
+            action = "index"
+        }
 		"500"(view:'/error')
+
+        name viewPost: "/view/$id/post" {
+            controller = 'post'
+            action = 'view'
+        }
+
 	}
 }

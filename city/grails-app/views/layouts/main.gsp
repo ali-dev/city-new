@@ -24,6 +24,9 @@
     <!-- STYLESHEETS -->
     <link href='http://fonts.googleapis.com/css?family=Raleway:300,500,600,800' rel='stylesheet' type='text/css'>
     %{--<link rel="stylesheet" media="screen, projection" href="assets/styles/" />--}%
+    %{--<link rel="stylesheet" href="${resource(dir: 'scripts/vendor/select2', file: 'select2.css')}" type="text/css" >--}%
+
+    %{--<link rel="stylesheet" href="${resource(dir: 'scripts/vendor/select2', file: 'select-theme.css')}" type="text/css" >--}%
     <link rel="stylesheet" media="screen, projection" href="${resource(dir: 'styles', file: 'screen.css')}" type="text/css">
     <!-- <link rel="stylesheet" media="screen and (min-width: 480px)" href="assets/styles/screen_small.css" />
         <link rel="stylesheet" media="screen and (min-width: 800px)" href="assets/styles/screen_medium.css" />
@@ -37,10 +40,11 @@
     <script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="assets/scripts/jquery.min.js"><\/script>')</script>
 
     <!-- JAVASCRIPT -->
-    <script type="text/javascript" src="${resource(dir: 'scripts', file: 'global.js')}"></script>
+    %{--<script type="text/javascript" src="${resource(dir: 'scripts/vendor/select2', file: 'select2.min.js')}"></script>--}%
+    %{--<script type="text/javascript" src="${resource(dir: 'scripts', file: 'global.js')}"></script>--}%
 
     <!-- 3rd Party JS -->
-    <script type="text/javascript" src="${resource(dir: 'scripts', file: 'respond.min.js')}"></script>
+
     <g:layoutHead/>
     <r:layoutResources />
 </head>
@@ -109,13 +113,23 @@
         </nav>
         <div class="globalTools lTable">
             <div class="advSearchBox js-advSearchTarget">
-                <form class="advSearchTarget">
+                <form id="js-advanced-search-form" class="advSearchTarget" action="${createLink(controller: 'home', action: 'index')}">
                     <div class="advSearchTarget-fieldset">
-                        <input class="input" type="input" placeholder="one" />
-                        <input class="input" type="input" placeholder="one" />
-                        <input class="input" type="input" placeholder="one" />
-                        <input class="input" type="input" placeholder="one" />
-                        <input class="btn btn_tight" type="submit" value="Search" />
+                        <input class="input" type="text" id="searchTerms" name="searchTerms"  placeholder="Enter Keywords.." />
+                        %{--<input class="input" type="input" placeholder="Posted by.." />--}%
+                        <select class=" select2" name="postedBy" data-placeholder="Posted by..">
+                            <option></option>
+                            <g:each var="user" in="${usersList}" >
+                                <option>${user.fullName}</option>
+                            </g:each>
+                        </select>
+                        <select class="select2" style="width:500px;" multiple="multiple" name="tags" data-placeholder="Choose Tags..">
+                            <option></option>
+                            <g:each var="tag" in="${tags}" >
+                                <option value="${tag.slug}">${tag.name}</option>
+                            </g:each>
+                        </select>
+                        <input class="btn btn_tight" id="js-search-posts"  type="submit" value="Search" />
                     </div>
                 </form>
             </div>
@@ -141,10 +155,6 @@
 
 
 
-
-
-</body>
-</html>
 
 
 

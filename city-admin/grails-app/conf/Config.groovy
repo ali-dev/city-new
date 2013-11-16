@@ -63,10 +63,11 @@ grails.hibernate.cache.queries = false
 environments {
     development {
         grails.logging.jul.usebridge = true
+//        grails.serverURL = "http://localhost:8082/city"
     }
     production {
         grails.logging.jul.usebridge = false
-        // TODO: grails.serverURL = "http://www.changeme.com"
+        // TODO: grails.serverURL = "http://www.city.ps"
     }
 }
 
@@ -99,7 +100,7 @@ bi.PhotoEntry = [
         outputDir: ['path':'/Users/ali_abulhaj/grails-projects/city/uploads/', 'alias':'/uploads/'],
         prefix: 'mySuperImage',
         images: [
-                'large':[scale:[width:800, height:600, type:ScaleType.APPROXIMATE]],
+                'large':[],
                 'small':[scale:[width:100, height:100, type:ScaleType.ACCURATE]],
         ],
         constraints:[

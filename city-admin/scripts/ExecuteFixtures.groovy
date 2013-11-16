@@ -50,12 +50,12 @@ def businesses = User.findAllByAccountType('business')
 def artists = User.findAllByAccountType('artist')
 
 businesses.each(){
-    //EventEntry.build(page : it.getPage(), title: 'event'+it.id, status: 'APPROVED', details: getDetails())
+    EventEntry.build(page : it.getPage(), title: 'event'+it.id, status: 'APPROVED', details: getDetails(), eventPhoto: null)
     JobEntry.build(page : it.getPage(), title: 'job'+it.id, status: 'APPROVED', details: getDetails())
 }
 artists.each(){
     VideoEntry.build(page : it.getPage(), title: 'video'+it.id, status: 'APPROVED', details: getDetails())
-//    PhotoEntry.build(page : it.getPage(), title: 'photo'+it.id, status: 'APPROVED')
+    PhotoEntry.build(page : it.getPage(), title: 'photo'+it.id, status: 'APPROVED', details: getDetails(), photo: null)
 
 }
 

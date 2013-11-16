@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="layout" content="main"/>
-
+    <meta name="layout" content="main">
+    <r:require modules="core, postsListPages"/>
 </head>
+
 <body>
 <div class="wrapper">
+<div class="section">
 
-    <div class="section gridTest"><!-- Blocks Objects -->
-        <div class="test">
-            <div class="hdg hdg_3 mix-txt_thick mix-txt_brandAlt mix-txt_caps">Blocks Objects</div>
-        </div>
-        <div class="grid">
-            <div class="grid-col grid-col_8">
-                Blocks 5 Up
-                <ul class="blocks blocks_4up">
-                    <li>One</li>
-                    <li>Two</li>
-                    <li>Three</li>
-                    <li>Four</li>
-                </ul>
-            </div>
-            <div class="grid-col grid-col_2">
-                Blocks 2 Up
-                <ul class="blocks blocks_flush blocks_2up">
-                    <li>One</li>
-                    <li>two</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+
+<div class="grid grid_overflow">
+<div class="grid-col grid-col_8">
+<ul id="js-postTileContainer" class="staticBlocksForIsotope"><!--testBlocks blocks blocks_overflow blocks_4upTo1up -->
+<g:each in="${entries}" var="post">
+    <g:render template="/common/tile" model="[post: post]" />
+</g:each>
+
+</ul>
+
 </div>
+
+</div>
+</div>
+</div>
+
+<!-- footer -->
+<div style="padding: 10px 5px; margin: 20px auto; text-align: center; background-color: lime; "><!-- Header -->
+Footer Placeholder
+</div>
+
+<div id="js-posts-modal"></div>
+
+<div class="md-overlay"></div><!-- the overlay element -->
+
 </body>
 </html>
+
+

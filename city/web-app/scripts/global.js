@@ -42,6 +42,7 @@ APP.MobileNavToggle = {
             e.preventDefault();
             self.toggleNav();
         });
+
     },
     
     toggleNav: function() {
